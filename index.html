@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <section class="home">
-        <div class="container">
-            <br/>
-            <div class="menu">
-                <h1>Вас вітає бюро знахідок!</h1>
-                <ul  class="form_list">
-                    <li>
-                        <div class="search_find">
-                            <div class="search_box">
-                                <input autocomplete="off" class="search_input" type="text" placeholder="Пошук"/>
-                                <button class="btn_search">
-                                    <svg width="18" height="18">
-                                        <use href="./img/icons8-search.svg#icon-search"></use>
-                                    </svg>
-                                
-                                </button>
-                            </div>
-                            <ul></ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="./addFind.html">
-                            <button class="btn_add">Додати знахідку</button>
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-    
+      <div class="container">
+        <br />
+        <div class="menu">
+          <h1>Вас вітає бюро знахідок!</h1>
+          <ul class="form_list">
+            <li>
+              <div class="search_find">
+                <div class="search_box">
+                  <input
+                    autocomplete="off"
+                    class="search_input"
+                    type="text"
+                    placeholder="Пошук"
+                  />
+                  <button class="btn_search">
+                    <svg width="18" height="18">
+                      <use href="./img/icons8-search.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul></ul>
+              </div>
+            </li>
+            <li>
+              <button id="openModal" class="btn_add">Додати знахідку</button>
+            </li>
+          </ul>
         </div>
+      </div>
     </section>
 
     <section class="render_finds">
-        <ul class="finds_list">
-
-        </ul>
-
+      <ul class="finds_list"></ul>
     </section>
-    <script src="./main.js"></script>
-</body>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form_item" type="submit">
+          <input
+            autocomplete="off"
+            id="input_name"
+            type="text"
+            placeholder="Назва"
+            name="find_name"
+          />
+          <textarea
+            id="input_info"
+            placeholder="Опис"
+            name="find_info"
+          ></textarea>
+          <input
+            autocomplete="off"
+            id="input_phone"
+            type="phone"
+            placeholder="Контакти"
+            name="find_phone"
+          />
+          <button class="btn">Опублікувати</button>
+        </form>
+      </div>
+    </div>
+
+    <script defer src="./JS/main.js"></script>
+    <script src="./JS/modal.js"></script>
+  </body>
 </html>

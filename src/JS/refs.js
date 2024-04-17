@@ -5,5 +5,4 @@ export const refs={
     closeBtn: document.querySelector(".close"),
     modal: document.getElementById("modal"),
     openModal: document.getElementById("openModal"),
-
 }

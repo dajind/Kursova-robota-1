@@ -1,6 +1,7 @@
 import { refs } from "./refs";
 
 refs.openModal.addEventListener("click", () => {
+    console.log("dhajdhasjdha");
     refs.modal.style.display = "block";
     refs.btnAdd.style.display = "none";
     
@@ -12,7 +13,7 @@ refs.openModal.addEventListener("click", () => {
   });
   
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
+    if (e.target === refs.modal) {
       refs.modal.style.display = "none";
     }
   });

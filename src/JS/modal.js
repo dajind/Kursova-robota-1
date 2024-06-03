@@ -1,19 +1,19 @@
-import { refs } from "./refs";
+import { refs } from './refs';
+export function modal() {
+  refs.openModal.addEventListener('click', () => {
+    refs.modal.style.display = 'block';
+    refs.btnAdd.style.display = 'none';
+  });
 
-refs.openModal.addEventListener("click", () => {
-    console.log("dhajdhasjdha");
-    refs.modal.style.display = "block";
-    refs.btnAdd.style.display = "none";
-    
+  refs.closeBtn.addEventListener('click', () => {
+    refs.modal.style.display = 'none';
+    refs.btnAdd.style.display = 'block';
   });
-  
-  refs.closeBtn.addEventListener("click", () => {
-    refs.modal.style.display = "none";
-    refs.btnAdd.style.display = "block";
-  });
-  
-  window.addEventListener("click", (e) => {
+
+  window.addEventListener('click', e => {
     if (e.target === refs.modal) {
-      refs.modal.style.display = "none";
+      refs.modal.style.display = 'none';
+      refs.btnAdd.style.display = 'block';
     }
   });
+}

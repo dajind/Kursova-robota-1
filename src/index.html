@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Бюро знахідок</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -44,7 +44,7 @@
     </section>
 
     <div id="modal" class="modal">
-      <div class="modal-content">
+      <div class="modal-form-content">
         <span class="close">&times;</span>
         <form class="form_item" type="submit">
           <input
@@ -53,25 +53,39 @@
             type="text"
             placeholder="Назва"
             name="find_name"
+            required
           />
           <textarea
             id="input_info"
             placeholder="Опис"
             name="find_info"
+            required
           ></textarea>
           <input
             autocomplete="off"
             id="input_phone"
-            type="phone"
+            type="tel"
             placeholder="Контакти"
             name="find_phone"
+            pattern="[0-9]{10,15}"
+            title="Введіть дійсний номер телефону (від 10 до 15 цифр)"
+            required
           />
           <button class="btn">Опублікувати</button>
         </form>
       </div>
     </div>
 
+    <div id="modalInformation" class="modalInformation">
+      <div class="modal-content">
+        <span class="closeModalInformation">&times;</span>
+        <h4 class="modalInformationTitle"></h4>
+        <p class="modalInformationText"></p>
+        <p class="modalInformationNumber"></p>
+        <button class="delete" data-id="">Видалити</button>
+      </div>
+    </div>
+
     <script src="./JS/main.js" type="module"></script>
-    <!-- <script src="./JS/modal.js"></script> -->
   </body>
 </html>
